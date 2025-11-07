@@ -1,0 +1,29 @@
+
+// To run all the dependencies
+pip install -r requirements.txt
+
+
+// To create vistual environment
+python -m venv .venv
+.venv\Scripts\activate
+
+//First time
+
+//Git Setup
+git config --global user.name "Aneesh Goel"
+git config --global user.email "aneeshfsm@yahoo.co.in"
+
+
+git init
+git add .
+git status
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/agoelgit/autogenagent.git
+git push -u origin main
+
+//Next time
+git status
+git add .
+git commit -m "first commit"
+git push 

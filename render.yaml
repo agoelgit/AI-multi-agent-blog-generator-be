@@ -1,0 +1,15 @@
+# render.yaml - For Render deployment
+services:
+  - type: web
+    name: multi-agent-blog-generator
+    env: python
+    region: oregon
+    plan: free
+    pythonVersion: 3.12.3        # ✅ Ensures compatible wheels (avoids Rust build)
+    buildCommand: pip install -r requirements.txt
+    startCommand: python main.py
+    envVars:
+      - key: OPENAI_API_KEY
+        sync: false
+      - key: PORT
+        value: 10000
